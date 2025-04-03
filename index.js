@@ -1,3 +1,7 @@
+// modal
+const NewEmployeeButton = document.getElementById("newEmpBtn");
+const ModalContainer = document.getElementById("modalContainer");
+
 // form inputs
 const EmployeeName = document.getElementById("empName");
 const EmployeeAge = document.getElementById("empAge");
@@ -56,4 +60,15 @@ ResetButton.addEventListener("click", () => {
   EmployeeContact.value = "";
   EmployeeDepartment.value = "";
   EmployeePosition.value = "";
+});
+
+NewEmployeeButton.addEventListener("click", () => {
+  ModalContainer.className = ""; // Remove any existing class
+  ModalContainer.classList.add("newEmpBtn");
+  document.body.classList.add("modal-active");
+});
+
+ModalContainer.addEventListener("click", () => {
+  ModalContainer.classList.add("out");
+  document.body.classList.remove("modal-active");
 });
