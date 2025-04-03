@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container"></div>
+    </main>
+    <!-- employee detail form  -->
+    <div class="employee-container">
+      <div class="head-container">
+        <h1>Employee Detail Form</h1>
+      </div>
+      <div class="form-container">
+        <div class="content">
+          <div class="form-group">
+            <label for="emp_name">Name:</label>
+            <input
+              type="text"
+              name="emp_name"
+              id="empName"
+              placeholder="employee name.."
+            />
+          </div>
+          <div class="form-group">
+            <label for="emp_age">Age:</label>
+            <input
+              type="number"
+              name="emp_age"
+              id="empAge"
+              placeholder="employee Age.."
+            />
+          </div>
+        </div>
+        <div class="content">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="empEmail"
+              placeholder="employee Email.."
+            />
+          </div>
+          <div class="form-group">
+            <label for="emp_contact">Contact:</label>
+            <input
+              type="number"
+              name="emp_contact"
+              id="empContact"
+              placeholder="Contact number.."
+            />
+          </div>
+        </div>
+        <div class="content">
+          <div class="form-group">
+            <label for="emp_dept">Department:</label>
+            <select name="emp_dept" id="empDepartment">
+              <option value="">Select Department</option>
+              <option value="it">IT (Information Technology)</option>
+              <option value="hr">HR (Human Resource)</option>
+              <option value="admin">Administration (admin)</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="emp_pos">Position:</label>
+            <select name="emp_pos" id="empPosition">
+              <option value="">Select Position</option>
+              <option value="manager">Manager</option>
+              <option value="lead">Team Lead</option>
+              <option value="senior">Senior</option>
+              <option value="junior">Junior</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="button-group">
+        <button id="resetBtn">Reset</button>
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
