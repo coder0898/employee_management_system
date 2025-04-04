@@ -57,8 +57,19 @@ main .main-container{
 main .top-group{
     display: flex;
     justify-content: end;
+    align-items: center;
+    gap: 20px;
     padding: 10px;
     margin-bottom: 15px;
+}
+
+.top-group input[type="search"] {
+    width: 80%;
+    max-width: 280px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1.1 rem;
 }
 
 .top-group button{
@@ -76,6 +87,109 @@ main .top-group{
 
 .top-group button:hover{
     background-color: var(--button-new-hover);
+}
+
+.main-content{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* th:hover {
+    background-color: #0056b3;
+} */
+
+td {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-group button{
+  width: 60px;
+  height: 35px;
+  font-size: 1 rem;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.action-group button:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+#editBtn{
+  background-color: var(--button-reset);
+}
+
+#editBtn{
+  background-color: var(--hover-reset);
+}
+
+#viewBtn{
+  background-color: var(--heading-background);
+}
+
+#viewBtn{
+  background-color: var(--button-new-hover);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+
+    .search-box {
+        width: 50%;
+    }
 }
 
 
@@ -215,6 +329,8 @@ html.modal-active, body.modal-active {
     padding: 20px;
     border-radius: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 .employee-container .head-container{
@@ -315,6 +431,14 @@ html.modal-active, body.modal-active {
 
 #submitBtn:hover {
     background-color:var(--hover-success);
+}
+
+#closeBtn{
+    background-color: var(--error-message-text);
+}
+
+#closeBtn:hover{
+    background-color: #FF6347;
 }
 
 @media (max-width: 768px) {
