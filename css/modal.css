@@ -1,0 +1,202 @@
+/* Modals and Animations */
+html.modal-active,
+body.modal-active {
+    overflow: hidden;
+}
+
+#modalContainer {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+
+#modalContainer.newEmpBtn {
+    transform: scale(1);
+}
+
+.modal-background {
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.employee-container {
+    position: relative;
+    max-width: 600px;
+    width: 80%;
+    background-color: var(--secondary-background);
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-container .head-container {
+    text-align: center;
+    background-color: var(--heading-background);
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.head-container h1 {
+    color: #ffffff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-container {
+    padding: 15px;
+}
+
+.form-container .content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--input-border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.button-group button {
+    width: 150px;
+    height: 45px;
+    font-size: 1.1rem;
+    background-color: var(--button-success);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetBtn {
+    background-color: var(--button-reset);
+}
+
+#resetBtn:hover {
+    background-color: var(--hover-reset);
+}
+
+#submitBtn {
+    background-color: var(--button-success);
+}
+
+#submitBtn:hover {
+    background-color: var(--hover-success);
+}
+
+#closeBtn {
+    background-color: var(--error-message-text);
+}
+
+#closeBtn:hover {
+    background-color: #FF6347;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleBack {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.85);
+    }
+}
+
+@keyframes scaleForward {
+    0% {
+        transform: scale(0.85);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes quickScaleDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}

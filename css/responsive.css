@@ -1,0 +1,99 @@
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .top-group {
+        flex-direction: column; /* Stack elements on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .top-group input[type="search"] {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .employee-container,
+    main {
+        width: inherit; /* Full width with some margin */
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .employee-container,
+    main {
+        width: 100vw; /* Full width with some margin */
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .action-group{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .button-group button {
+        width: 100%; /* Full width buttons */
+    }
+
+    #resetBtn {
+        background-color: var(--button-reset);
+    }
+    
+    #resetBtn:hover {
+        background-color: var(--hover-reset);
+    }
+    
+    #submitBtn {
+        background-color: var(--button-success);
+    }
+    
+    #submitBtn:hover {
+        background-color: var(--hover-success);
+    }
+    
+    #closeBtn {
+        background-color: var(--error-message-text);
+    }
+    
+    #closeBtn:hover {
+        background-color: #FF6347;
+    }
+}
+
+/* Ensure proper text wrapping */
+@media (max-width: 1024px) {
+    th,
+    td {
+        word-wrap: break-word;
+        white-space: normal; /* Allow wrapping of table cells */
+    }
+}
+
+
+
